@@ -8,5 +8,5 @@ export const ListaProdutos = [
     {id: 7, nome: 'Cadeira', preco: 1050},
     {id: 8, nome: 'Webcam', preco: 350},
     {id: 9, nome: 'Microfone', preco: 650},
-    {id: 9, nome: 'Caixa de som', preco: 250}
+    {id: 10, nome: 'Caixa de som', preco: 250}
 ]

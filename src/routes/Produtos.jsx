@@ -1,3 +1,4 @@
+import { ListaProdutos } from "../components/ListaProdutos";
 import "./Produtos.css";
 
 export default function Produtos(){
@@ -12,6 +13,7 @@ export default function Produtos(){
                         <th>ID</th>
                         <th>NOME</th>
                         <th>PREÇO</th>
+                        <th>EDITAR/EXCLUIR</th>
                     </tr>
 
                     {ListaProdutos.map((produto, indice) => (
@@ -19,6 +21,10 @@ export default function Produtos(){
                             <td>{produto.id}</td>
                             <td>{produto.nome}</td>
                             <td>{produto.preco}</td>
+                            <td>
+                                <Link to={`/editar/produto/${produto.id}`}>EDITAR</Link> / 
+                                <Link to={`/excluir/produto/${produto.id}`}>EXCLUIR</Link>
+                            </td>
                         </tr>
                     ))}
 
