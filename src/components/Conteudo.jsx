@@ -1,17 +1,12 @@
-export default function Conteudo() {
-
-  return (
-    <>
+export default function Conteudo(){
+    return(
+        <>
         <section className="conteudo">
             <div>
-                <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae quaerat esse voluptates nemo maiores! Earum, impedit voluptatum voluptates hic quisquam dolorum facilis, nam ad magnam, veritatis voluptatibus delectus eos recusandae?
-                </p>
-                <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, quaerat. Cumque commodi vitae, cum fugiat itaque eveniet recusandae vel iusto tempora quam! Nesciunt, laborum in dignissimos expedita repudiandae ullam dolores!
-                </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas exercitationem voluptatem, omnis rerum facilis corporis veritatis laborum ea possimus id voluptatum temporibus rem, quo harum, reiciendis perferendis! Explicabo, eaque magnam?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dignissimos dolore consequuntur! Cum in enim voluptatum harum tempora minus quibusdam saepe odit alias ullam. Provident doloribus quisquam id numquam praesentium!</p>
             </div>
         </section>
-    </>
-  )
+        </>
+    )
 }

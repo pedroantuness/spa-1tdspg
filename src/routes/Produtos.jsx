@@ -6,9 +6,9 @@ import "./Produtos.css";
 export default function Produtos() {
 
     const estiloCelulas = {
-        widht: "10%",
-        textAlign: "center",
-        fontWeight: "bold"
+        widht: '10%',
+        textAlign:"center",
+        fontWeight:"bold"
     };
 
 
@@ -29,12 +29,12 @@ export default function Produtos() {
                     </tr>
 
                     {ListaProdutos.map( (produto, indice) => (
-                        <tr className= {(produto.id % 2 ==0) ? "linhaCinza" : "linhaBranca"} key={indice}>
+                        <tr className={(produto.id %2==0) ? "linhaCinza" : "linhaBranca"} key={indice}>
                             <td style={estiloCelulas}>{produto.id}</td>
                             <td>{produto.nome}</td>
                             <td>{produto.desc}</td>
                             <td>{produto.preco}</td>
-                            <td><img style={{width: "100px"}} src={`${produto.img}`} alt={`${produto.desc}`}/></td>
+                            <td><img style={{width:"100px"}} src={`${produto.img}`} alt={`${produto.desc}`}/></td>
                             <td><Link to={`/editar/produto/${produto.id}`}><Editar/></Link> / 
                             <Link to={`/excluir/produto/${produto.id}`}><Excluir/></Link></td>
                         </tr>
@@ -46,3 +46,5 @@ export default function Produtos() {
         </>
     )
 }
+
+

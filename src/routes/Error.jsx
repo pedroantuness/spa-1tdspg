@@ -1,9 +1,10 @@
-export default function Error(){
-    
+
+
+export default function Error() {
     return(
         <>
             <div>
-                <h1>ERRO-404</h1>
+                <h1>Erro-404</h1>
             </div>
         </>
     )
