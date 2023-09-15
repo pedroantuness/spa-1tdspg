@@ -21,7 +21,7 @@
                 & img {
                     display: block;
                     margin: 0 auto;
-                    width: 15%;
+                    width: 35%;
                     /* transition: width 3s; */
                     &:hover {
                         width: 100%;
