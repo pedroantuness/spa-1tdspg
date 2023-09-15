@@ -38,32 +38,34 @@ export default function Produtos() {
 
                 <table className={classes.tabelaProd}>
 
-                    <thead>
+                    <thead className={classes.tabelaCabecalho}>
                         <tr>
-                            <th className={classes.tabelaCabecalho}>ID</th>
-                            <th className={classes.tabelaCabecalho}>Nome</th>
-                            <th className={classes.tabelaCabecalho}>Descrição</th>
-                            <th className={classes.tabelaCabecalho}>Preço</th>
-                            <th className={classes.tabelaCabecalho}>IMG</th>
-                            <th className={classes.tabelaCabecalho}><Editar/> / <Excluir/></th>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Preço</th>
+                            <th>IMG</th>
+                            <th><Editar/> / <Excluir/></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className={classes.tabelaCorpo}>
                         {novaListaProdutos.map( (produto, indice) => (
                             <tr className={classes.tabelaLinha} key={indice}>
-                                <td className={classes.tabelaDados}>{produto.id}</td>
-                                <td className={classes.tabelaDados}>{produto.nome}</td>
-                                <td className={classes.tabelaDados}>{produto.desc}</td>
-                                <td className={classes.tabelaDados}>{produto.preco}</td>
-                                <td className={classes.tabelaDados}><img className={classes.tblImg} src={`${produto.img}`} alt={`${produto.desc}`}/></td>
-                                <td className={classes.tabelaDados}><Link to={`/editar/produto/${produto.id}`}><Editar/></Link> / 
+                                <td>{produto.id}</td>
+                                <td>{produto.nome}</td>
+                                <td>{produto.desc}</td>
+                                <td>{produto.preco}</td>
+                                <td><img src={`${produto.img}`} alt={`${produto.desc}`}/></td>
+                                <td><Link to={`/editar/produto/${produto.id}`}><Editar/></Link> / 
                                 <Link to={`/excluir/produto/${produto.id}`}><Excluir/></Link></td>
                             </tr>
                         ))}
                     </tbody>
-                    {/* <tfoot>
-                        <td colSpan={6}>PRODUTOS</td>
-                    </tfoot> */}
+                    <tfoot className={classes.tabelaRodape}>
+                        <tr>
+                            <td colSpan={6}>Produtos informáticos - QTD = {novaListaProdutos.length}</td>
+                        </tr>
+                    </tfoot>
                 </table>
 
             </div>
