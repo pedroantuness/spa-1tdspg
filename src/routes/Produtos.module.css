@@ -4,7 +4,7 @@
     border: 2px solid #ccc;
 
     .tabelaCabecalho {
-        background-color: #ecb15f;
+        background-color: #8716b4;
         & th {
             border: 2px solid #ccc;
             text-align: center;
@@ -38,7 +38,7 @@
     }
 
     .tabelaRodape {
-        background-color: #ecb15f;
+        background-color: #8716b4;
         & td {
             text-align: center;
             font-weight: bold;
