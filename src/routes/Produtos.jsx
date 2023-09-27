@@ -15,27 +15,27 @@ export default function Produtos() {
     //     console.log("UseEffect que renderiza apenas uma vez!")
     // }, [ ]);
 
-    useEffect(() => {
-        
-        // fetch = API do Javascript para realizar rquisições/requests, utiliza como parâmetro uma URL ou URI.
-        // fetch(http://minhaApi.com.br/exemplos)
-        fetch("http://localhost:5000/produtos", {
-            method: "GET",
-            headers:{
-                "Content-Type" : "application/json"
-            }
-        })
-        .then((response) => response.json())
-        .then((data) => {
-            setNovaListaProdutos(data);
-        })
-        .catch(error => console.log(error))
-
-    }, [ ]);
-
-
     const [open, setOpen] = useState(false);
 
+    useEffect(() => {
+        if(!open){
+
+            
+            // fetch = API do Javascript para realizar rquisições/requests, utiliza como parâmetro uma URL ou URI.
+            // fetch(http://minhaApi.com.br/exemplos)
+            fetch("http://localhost:5000/produtos", {
+                method: "GET",
+                headers:{
+                    "Content-Type" : "application/json"
+                }
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                setNovaListaProdutos(data);
+            })
+            .catch(error => console.log(error))      
+        }
+    }, [open]);
 
     return(
         <>
@@ -43,7 +43,7 @@ export default function Produtos() {
                 <h1>Produtos</h1>
 
                 { open ? <ModalExemplo open={open} setOpen={setOpen}/> : "" }
-                <button onClick={() => setOpen(true)}>OPEN-MODAL</button>
+                <Link onClick={() => setOpen(true)}>Adicionar Produto</Link>
 
                 <table className={classes.tabelaProd}>
 

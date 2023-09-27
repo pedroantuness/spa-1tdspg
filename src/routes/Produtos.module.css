@@ -1,12 +1,12 @@
 .tabelaProd {
     border-collapse: collapse;
     margin: 0 auto;
-    border: 2px solid #ccc;
+    border: 2px solid #000000;
 
     .tabelaCabecalho {
         background-color: #8716b4;
         & th {
-            border: 2px solid #ccc;
+            border: 2px solid #000000;
             text-align: center;
         }
     }
@@ -17,7 +17,7 @@
                 background-color: #ccc;
             }
             & td {
-                border: 2px solid #ccc;
+                border: 2px solid #000000;
                 & img {
                     display: block;
                     margin: 0 auto;
