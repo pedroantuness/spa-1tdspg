@@ -90,13 +90,6 @@
       "desc": "SSD Gamer",
       "preco": 200,
       "img": "https://picsum.photos/200/300"
-    },
-    {
-      "nome": "Celular",
-      "preco": "2500",
-      "desc": "Celular bolado",
-      "img": "sdgasdg",
-      "id": 14
     }
   ]
 }
