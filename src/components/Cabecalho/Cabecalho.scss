@@ -1,0 +1,33 @@
+.cabecalho {
+    background-color: #000;
+    color: #fff;
+    width: 20%;
+    margin: 1% 24% 0 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    ul{
+        list-style: none;
+
+        li a{
+            display: block;
+            text-decoration: none;
+            padding: 8px 32px;
+            color: #fff;
+            transition: background-color ease-out 300ms, color ease-out 300ms;
+
+            &:hover{
+                background-color: #8716b4;
+            }
+
+        }
+
+    }
+
+    //Vamos criar uma classe para a página ou rota ativa:
+    .active{
+        background-color: #a52a2a;
+        color: #fff;
+    }
+
+}
