@@ -21,10 +21,10 @@
                 & img {
                     display: block;
                     margin: 0 auto;
-                    width: 35%;
+                    width: 15%;
                     /* transition: width 3s; */
                     &:hover {
-                        width: 100%;
+                        /* width: 100%; */
                     }
                 }
                 &:first-child {
