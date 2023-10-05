@@ -20,7 +20,6 @@ export default function Produtos() {
     useEffect(() => {
         if(!open){
 
-            
             // fetch = API do Javascript para realizar rquisições/requests, utiliza como parâmetro uma URL ou URI.
             // fetch(http://minhaApi.com.br/exemplos)
             fetch("http://localhost:5000/produtos", {
@@ -29,11 +28,11 @@ export default function Produtos() {
                     "Content-Type" : "application/json"
                 }
             })
-            .then((response) => response.json())
-            .then((data) => {
-                setNovaListaProdutos(data);
-            })
-            .catch(error => console.log(error))      
+                .then((response) => response.json())
+                .then((data) => {
+                    setNovaListaProdutos(data);
+                })
+                .catch(error => console.log(error))      
         }
     }, [open]);
 
@@ -44,7 +43,6 @@ export default function Produtos() {
             headers:{
                 'Content-Type':'application/json'
             },
-            body: JSON.stringify(id)
         })
 
         .then((response) => console.log(response.status))
